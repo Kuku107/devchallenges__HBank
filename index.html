@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="side-nav.css">
     <link rel="stylesheet" href="section.css">
     <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="tag.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -27,35 +28,57 @@
             <div class="side-nav__top">
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/House.svg" alt="house svg">
+                        <p class="hidden__element">Dashboard</p>
                     </div>
                 <div class="side-nav__list">
+                    <p class="hidden__element">Analytics</p>
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/show%20chart-1.svg" alt="show chart svg">
+                        <p class="hidden__element">Performance</p>
                     </div>
-                    <div class="side-nav__item">
-                        <img class="side-nav__icon" src="resources/Archery.svg" alt="archery svg">
+                    <div class="side-nav__item__tag">
+                        <div class="side-nav__item">
+                            <img class="side-nav__icon" src="resources/Archery.svg" alt="archery svg">
+                            <p class="hidden__element">Hotjar</p>
+                        </div>
+                        <div class="tag__type hidden__element">
+                            <p class="hidden__element">New</p>
+                        </div>
                     </div>
                 </div>
                 <div class="side-nav__list">
-                    <div class="side-nav__item">
-                        <img class="side-nav__icon" src="resources/ticket.svg" alt="ticket svg">
+                    <p class="hidden__element">Support</p>
+                    <div class="side-nav__item__tag">
+                        <div class="side-nav__item">
+                            <img class="side-nav__icon" src="resources/ticket.svg" alt="ticket svg">
+                            <p class="hidden__element">Tickets</p>
+                        </div>
+                        <div class="tag__amount--side hidden__element">
+                            <p class="hidden__element">18</p>
+                        </div>
                     </div>
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/account.svg" alt="account svg">
+                        <p class="hidden__element">Agents</p>
                     </div>
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/users.svg" alt="users svg">
+                        <p class="hidden__element">Customers</p>
                     </div>
                 </div>
                 <div class="side-nav__list">
+                    <p class="hidden__element">SHOP</p>
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/shop.svg" alt="shop svg">
+                        <p class="hidden__element">Products</p>
                     </div>
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/basket.svg" alt="basket svg">
+                        <p class="hidden__element">Orders</p>
                     </div>
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/chat%20info.svg" alt="chat info svg">
+                        <p class="hidden__element">Reports</p>
                     </div>
                 </div>
             </div>
@@ -63,66 +86,159 @@
                 <div class="side-nav__list">
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/Setting.svg" alt="setting svg">
+                        <p class="hidden__element">Settings</p>
                     </div>
                     <div class="side-nav__item">
                         <img class="side-nav__icon" src="resources/Logout.svg" alt="logout svg">
+                        <p class="hidden__element">Logout</p>
                     </div>
                 </div>
             </div>
         </nav>
         <section id="section">
-            <section id="main-section">
-            </section>
-            <section id="side-section">
-                <p>Card details</p>
-                <div class="card__container--center">
-                    <div class="card card--small">
-                        <div class="incard__top">
-                            <div class="incard__line__info incard__type">
-                                <p>Shopping Card</p>
-                                <img src="resources/card.svg" alt="card svg">
-                            </div>
-                            <div class="incard__line__info incard__name">
-                                <p>NAME</p>
-                                <p>Exp 26/6</p>
-                            </div>
+                <section id="main-section">
+                    <p class="title">Inventory Details</p>
+                    <div class="card card--big">
+                        <div class="incard__left">
+                            <p>Your balance:</p>
+                            <p>$25,330</p>
+                            <p>3 cards</p>
                         </div>
-                        <div class="incard__bottom">
-                            <div class="incard__line__info incard__number">
-                                <p>**** **** 7800</p>
-                                <img src="resources/visa-logo.svg" alt="visa logo">
-                            </div>
+                        <div class="incard__right">
+                            <button>
+                                Details
+                                <img src="resources/down%20arrow.svg" alt="down arrow svg">
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div class="card__number">
-                    <p>CARD NUMBER</p>
-                    <p>**** 1234 4567 7800</p>
-                </div>
-                <div class="card__details">
-                    <div class="card__details__item">
-                        <p>EXPIRE DATE</p>
-                        <p>08/28</p>
+                    <div>
+                        <p class="title">Inventory Details</p>
+                        <div class="tag__amount"><p>2</p></div>
                     </div>
-                    <div class="card__details__item">
-                        <p>CVV</p>
-                        <p>08/28</p>
+                    <div class="card__list">
+                        <div id="card__small-1" class="card card--small">
+                            <div class="incard__top">
+                                <div class="incard__line__info incard__type">
+                                    <p>Shopping Card</p>
+                                    <img src="resources/card.svg" alt="card svg">
+                                </div>
+                                <div class="incard__line__info incard__name">
+                                    <p>NAME</p>
+                                    <p>Exp 26/6</p>
+                                </div>
+                            </div>
+                            <div class="incard__bottom">
+                                <div class="incard__line__info incard__number">
+                                    <p>**** **** 0928</p>
+                                    <img src="resources/visa-logo.svg" alt="visa logo">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card__small-2" class="card card--small">
+                            <div class="incard__top">
+                                <div class="incard__line__info incard__type">
+                                    <p>Shopping Card</p>
+                                    <img src="resources/card.svg" alt="card svg">
+                                </div>
+                                <div class="incard__line__info incard__name">
+                                    <p>NAME</p>
+                                    <p>Exp 26/6</p>
+                                </div>
+                            </div>
+                            <div class="incard__bottom">
+                                <div class="incard__line__info incard__number">
+                                    <p>**** **** 4486</p>
+                                    <img src="resources/visa-logo.svg" alt="visa logo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__added">
+                            <div>
+                                <img src="resources/Plus.svg" alt="plus svg">
+                                <p>Add Card</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card__details__item">
-                        <p>LEVEL</p>
-                        <p>02</p>
+                    <div class="card__metric__list">
+                        <div id="card__metric-1" class="card__metric">
+                            <div class="card__metric__logo">
+                                <img src="resources/show%20chart%20black.svg" alt="show chart svg">
+                            </div>
+                            <div class="card__metric__content">
+                                <p class="card__metric__title">Earnings</p>
+                                <p class="card__metric__amount">$12,341</p>
+                            </div>
+                        </div>
+                        <div id="card__metric-2" class="card__metric">
+                            <div class="card__metric__logo">
+                                <img src="resources/dollar%20coin.svg" alt="dollar coin svg">
+                            </div>
+                            <div class="card__metric__content">
+                                <p class="card__metric__title">Spendings</p>
+                                <p class="card__metric__amount">$4,009</p>
+                            </div>
+                        </div>
+                        <div id="card__metric-3" class="card__metric">
+                            <div class="card__metric__logo">
+                                <img src="resources/aim.svg" alt="aim svg">
+                            </div>
+                            <div class="card__metric__content">
+                                <p class="card__metric__title">Goals</p>
+                                <p class="card__metric__amount">$8,098</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="line"></div>
-                <p>Spending limits</p>
-                <div class="card__transaction__limit">
-                    <p>DAILY TRANSACTION LIMIT</p>
-                    <div class="line-transaction">
-                        <div></div>
+                </section>
+                <section id="side-section">
+                    <p class="title">Card details</p>
+                    <div class="card__container--center">
+                        <div class="card card--small">
+                            <div class="incard__top">
+                                <div class="incard__line__info incard__type">
+                                    <p>Shopping Card</p>
+                                    <img src="resources/card.svg" alt="card svg">
+                                </div>
+                                <div class="incard__line__info incard__name">
+                                    <p>NAME</p>
+                                    <p>Exp 26/6</p>
+                                </div>
+                            </div>
+                            <div class="incard__bottom">
+                                <div class="incard__line__info incard__number">
+                                    <p>**** **** 7800</p>
+                                    <img src="resources/visa-logo.svg" alt="visa logo">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>$400 spent of $2000</p>
-                </div>
-            </section>
+                    <div class="card__number">
+                        <p>CARD NUMBER</p>
+                        <p>**** 1234 4567 7800</p>
+                    </div>
+                    <div class="card__details">
+                        <div class="card__details__item">
+                            <p>EXPIRE DATE</p>
+                            <p>08/28</p>
+                        </div>
+                        <div class="card__details__item">
+                            <p>CVV</p>
+                            <p>08/28</p>
+                        </div>
+                        <div class="card__details__item">
+                            <p>LEVEL</p>
+                            <p>02</p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <p class="title">Spending limits</p>
+                    <div class="card__transaction__limit">
+                        <p>DAILY TRANSACTION LIMIT</p>
+                        <div class="line-transaction">
+                            <div></div>
+                        </div>
+                        <p>$400 spent of $2000</p>
+                    </div>
+                </section>
         </section>
     </div>
 </body>

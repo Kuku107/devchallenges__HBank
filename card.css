@@ -1,5 +1,6 @@
 .card__container--center {
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 22px;
@@ -79,4 +80,237 @@
 .incard__number img {
     height: 17px;
     width: auto;
+}
+
+.card--big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E3ECE6;
+}
+
+.incard__left {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+.incard__left > p {
+    width: fit-content;
+    color: #262833;
+}
+
+.incard__left p:nth-child(odd) {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.incard__left p:nth-child(even) {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.incard__right {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    gap: 140px;
+    padding: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #73B06F;
+    position: relative;
+}
+
+.incard__right::before {
+    content: "";
+    background-image: url("resources/background-decor.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 211px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.incard__right > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    border-radius: 50px;
+    background-color: #E3ECE6;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    color: #262833;
+    position: relative;
+    z-index: 2;
+}
+
+.incard__right img {
+    width: 24px;
+    height: auto;
+}
+
+.card__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+#card__small-1 {
+    background-color: #E4D6F3;
+}
+
+#card__small-1 > .incard__top {
+    background-color: #E4D6F3;
+}
+
+#card__small-1 > .incard__bottom {
+    background-color: #A686C4;
+}
+
+#card__small-2 {
+    background-color: #F5DDC8;
+}
+
+#card__small-2 > .incard__top {
+    background-color: #F5DDC8;
+}
+
+#card__small-2 > .incard__bottom {
+    background-color: #E9AE79;
+}
+
+.card__added {
+    width: 288px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px dashed #43454D;
+}
+
+.card__added:hover {
+    cursor: pointer;
+    background-color: #E3ECE6;
+    border: none;
+}
+
+.card__added > div {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__added img {
+    width: 20px;
+    height: 20px;
+}
+
+.card__added p {
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.card__metric__list {
+    width: 100%;
+    border: 1px solid #43454D;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.card__metric {
+    width: fit-content;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 24px 20px;
+}
+
+.card__metric__logo {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.card__metric__content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card__metric__title {
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6C727F;
+}
+
+.card__metric__amount {
+    width: fit-content;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.card__metric__logo > img {
+    width: 24px;
+    height: 24px;
+}
+
+#card__metric-1 > .card__metric__logo {
+    background-color: #73B06F;
+}
+
+#card__metric-2 > .card__metric__logo {
+    background-color: #A686C4;
+}
+
+#card__metric-3 > .card__metric__logo {
+    background-color: #E9AE79;
+}
+
+@media (min-width: 1024px) {
+    .card__container--center {
+        width: 236px;
+        height: 288px;
+    }
+
+    .card__container--center > .card--small {
+        transform: rotate(-90deg);
+    }
+}
+
+@media (min-width: 1280px) {
+    .card__metric__list {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .card__list {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
 }
